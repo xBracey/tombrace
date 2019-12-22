@@ -1,0 +1,17 @@
+{
+  "name": "tombrace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xBracey/tombrace.git",
+  "author": "Thomas Brace <tommy-brace-22@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-sass ./src/scss/main.scss ./src/main.css",
+    "start": "concurrently \"node-sass --watch ./src/scss/main.scss ./src/main.css\" \"http-server src\""
+  },
+  "dependencies": {
+    "concurrently": "^5.0.2",
+    "http-server": "^0.12.0",
+    "node-sass": "^4.13.0"
+  }
+}
