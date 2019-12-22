@@ -52,14 +52,79 @@ header {
     bottom: 0;
     z-index: 1; }
 
+#about-me,
+#experience,
+#projects {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  #about-me h2,
+  #experience h2,
+  #projects h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 10px; }
+  #about-me .content,
+  #experience .content,
+  #projects .content {
+    display: flex;
+    width: 100%;
+    max-width: 1250px;
+    padding: 0px 25px; }
+
 #about-me {
-  background-color: #0094c6;
-  padding: 25px; }
+  background-color: #0094c6; }
+  #about-me img {
+    width: 240px;
+    height: 320px;
+    border: 10px solid #001242;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 50px; }
+  #about-me p {
+    font-size: 20px; }
 
 #experience {
-  background-color: #e2dcde;
-  padding: 25px; }
+  background-color: #e2dcde; }
+  #experience .content {
+    flex-wrap: wrap; }
+    #experience .content .skill {
+      width: calc((100% / 3) - 100px);
+      border: 5px solid #001242;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 25px;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out; }
+      #experience .content .skill .skill-header {
+        display: flex;
+        height: 50px; }
+        #experience .content .skill .skill-header h3 {
+          flex: 1;
+          text-align: center;
+          margin: auto; }
+        #experience .content .skill .skill-header img {
+          height: 30px;
+          width: 30px;
+          padding: 10px; }
+    #experience .content .skill.open {
+      max-height: 400px; }
+    #experience .content .skill.close {
+      max-height: 50px; }
+  #experience h2,
+  #experience h3,
+  #experience p {
+    color: #001242; }
 
 #projects {
-  background-color: #001242;
-  padding: 25px; }
+  background-color: #001242; }
+
+footer {
+  background-color: #e2dcde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; }
+  footer .linkedin {
+    height: 40px; }
