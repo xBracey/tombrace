@@ -40,10 +40,15 @@ header {
         margin-right: 25px; }
         header .content .content-container .menu a {
           text-decoration: none;
-          color: white; }
+          color: white;
+          display: flex;
+          align-items: center; }
           header .content .content-container .menu a p {
-            padding: 25px;
+            padding: 0px 25px;
             font-size: 24px; }
+        header .content .content-container .menu .linkedin {
+          height: 40px;
+          padding: 0px 25px; }
   header .light-overlay {
     background-color: #0094c6;
     height: 60px;
@@ -55,25 +60,26 @@ header {
 #about-me,
 #experience,
 #projects {
-  padding: 25px;
+  padding: 100px 25px;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column; }
   #about-me h2,
   #experience h2,
   #projects h2 {
     text-align: center;
-    font-size: 32px;
-    margin: 10px; }
+    font-size: 36px;
+    margin: 25px; }
   #about-me .content,
   #experience .content,
   #projects .content {
     display: flex;
-    width: 100%;
+    width: calc(100% - 50px);
     max-width: 1250px;
     padding: 0px 25px; }
 
 #about-me {
+  padding-top: 50px;
   background-color: #0094c6; }
   #about-me img {
     width: 240px;
@@ -84,11 +90,17 @@ header {
     margin-right: 50px; }
   #about-me p {
     font-size: 20px; }
+  #about-me .content {
+    align-items: center; }
 
 #experience {
   background-color: #e2dcde; }
   #experience .content {
     flex-wrap: wrap; }
+    #experience .content .cv {
+      text-decoration: none;
+      color: #001242;
+      max-height: 50px; }
     #experience .content .skill {
       width: calc((100% / 3) - 100px);
       border: 5px solid #001242;
@@ -119,12 +131,3 @@ header {
 
 #projects {
   background-color: #001242; }
-
-footer {
-  background-color: #e2dcde;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px; }
-  footer .linkedin {
-    height: 40px; }
