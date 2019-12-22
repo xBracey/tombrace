@@ -1,4 +1,65 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+p,
+h1,
+h2,
+h3 {
+  font-family: "Rubik";
+  color: white; }
+
 header {
-  height: 120px;
+  height: 160px;
   background-color: #001242;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
+  header .content {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center; }
+    header .content .content-container {
+      width: 100%;
+      max-width: 1250px;
+      padding: 0px 25px;
+      display: flex;
+      justify-content: space-between; }
+      header .content .content-container .logo {
+        height: 120px;
+        width: 120px;
+        margin: 40px 0px 0px 50px; }
+      header .content .content-container .menu {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        margin-right: 25px; }
+        header .content .content-container .menu a {
+          text-decoration: none;
+          color: white; }
+          header .content .content-container .menu a p {
+            padding: 25px;
+            font-size: 24px; }
+  header .light-overlay {
+    background-color: #0094c6;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1; }
+
+#about-me {
+  background-color: #0094c6;
+  padding: 25px; }
+
+#experience {
+  background-color: #e2dcde;
+  padding: 25px; }
+
+#projects {
+  background-color: #001242;
+  padding: 25px; }
