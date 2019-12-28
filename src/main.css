@@ -89,7 +89,8 @@ header {
     border-radius: 20px;
     margin-right: 50px; }
   #about-me p {
-    font-size: 20px; }
+    font-size: 20px;
+    flex: 1; }
   #about-me .content {
     align-items: center; }
 
@@ -131,3 +132,5 @@ header {
 
 #projects {
   background-color: #001242; }
+  #projects img {
+    height: 1px; }

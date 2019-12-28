@@ -123,6 +123,7 @@ header {
 
     p {
         font-size: 20px;
+        flex: 1;
     }
 
     .content {
@@ -191,4 +192,8 @@ header {
 
 #projects {
     background-color: $dark-blue;
+
+    img {
+        height: 1px;
+    }
 }
