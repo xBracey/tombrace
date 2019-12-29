@@ -17,6 +17,17 @@ $dark-blue: #001242;
 $light-blue: #0094c6;
 $light-grey: #e2dcde;
 
+@mixin mobile {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
 // Header
 
 header {
@@ -46,13 +57,20 @@ header {
                 height: 120px;
                 width: 120px;
                 margin: 40px 0px 0px 50px;
+
+                @include mobile {
+                    margin: 40px auto;
+                }
             }
 
             .menu {
                 display: flex;
                 height: 100px;
                 align-items: center;
-                margin-right: 25px;
+
+                @include desktop {
+                    margin-right: 25px;
+                }
 
                 a {
                     text-decoration: none;
@@ -62,8 +80,13 @@ header {
                         padding: 0px 25px;
                         font-size: 24px;
                     }
+
                     display: flex;
                     align-items: center;
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
 
                 .linkedin {
@@ -105,6 +128,11 @@ header {
         width: calc(100% - 50px);
         max-width: 1250px;
         padding: 0px 25px;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
     }
 }
 
@@ -118,7 +146,11 @@ header {
         border: 10px solid #001242;
         box-sizing: border-box;
         border-radius: 20px;
-        margin-right: 50px;
+        margin: 50px 0px;
+
+        @include desktop {
+            margin: 0px 50px 0px 0px;
+        }
     }
 
     p {
@@ -146,13 +178,21 @@ header {
         }
 
         .skill {
-            width: calc((100% / 3) - 100px);
+            width: calc(100% - 100px);
             border: 5px solid $dark-blue;
             border-radius: 20px;
             padding: 20px;
             margin: 25px;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
+
+            @include desktop {
+                width: calc((100% / 3) - 100px);
+            }
+
+            p {
+                margin: 20px 0px;
+            }
 
             .skill-header {
                 display: flex;
@@ -169,6 +209,12 @@ header {
                     width: 30px;
                     padding: 10px;
                 }
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: $dark-blue;
             }
         }
 

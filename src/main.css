@@ -33,11 +33,16 @@ header {
         height: 120px;
         width: 120px;
         margin: 40px 0px 0px 50px; }
+        @media (max-width: 599px) {
+          header .content .content-container .logo {
+            margin: 40px auto; } }
       header .content .content-container .menu {
         display: flex;
         height: 100px;
-        align-items: center;
-        margin-right: 25px; }
+        align-items: center; }
+        @media (min-width: 900px) {
+          header .content .content-container .menu {
+            margin-right: 25px; } }
         header .content .content-container .menu a {
           text-decoration: none;
           color: white;
@@ -46,6 +51,9 @@ header {
           header .content .content-container .menu a p {
             padding: 0px 25px;
             font-size: 24px; }
+          @media (max-width: 599px) {
+            header .content .content-container .menu a {
+              display: none; } }
         header .content .content-container .menu .linkedin {
           height: 40px;
           padding: 0px 25px; }
@@ -76,7 +84,13 @@ header {
     display: flex;
     width: calc(100% - 50px);
     max-width: 1250px;
-    padding: 0px 25px; }
+    padding: 0px 25px;
+    flex-direction: column; }
+    @media (min-width: 900px) {
+      #about-me .content,
+      #experience .content,
+      #projects .content {
+        flex-direction: row; } }
 
 #about-me {
   padding-top: 50px;
@@ -87,7 +101,10 @@ header {
     border: 10px solid #001242;
     box-sizing: border-box;
     border-radius: 20px;
-    margin-right: 50px; }
+    margin: 50px 0px; }
+    @media (min-width: 900px) {
+      #about-me img {
+        margin: 0px 50px 0px 0px; } }
   #about-me p {
     font-size: 20px;
     flex: 1; }
@@ -103,13 +120,18 @@ header {
       color: #001242;
       max-height: 50px; }
     #experience .content .skill {
-      width: calc((100% / 3) - 100px);
+      width: calc(100% - 100px);
       border: 5px solid #001242;
       border-radius: 20px;
       padding: 20px;
       margin: 25px;
       overflow: hidden;
       transition: max-height 0.5s ease-out; }
+      @media (min-width: 900px) {
+        #experience .content .skill {
+          width: calc((100% / 3) - 100px); } }
+      #experience .content .skill p {
+        margin: 20px 0px; }
       #experience .content .skill .skill-header {
         display: flex;
         height: 50px; }
@@ -121,6 +143,10 @@ header {
           height: 30px;
           width: 30px;
           padding: 10px; }
+      #experience .content .skill a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #001242; }
     #experience .content .skill.open {
       max-height: 400px; }
     #experience .content .skill.close {
