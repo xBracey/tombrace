@@ -120,16 +120,17 @@ header {
       color: #001242;
       max-height: 50px; }
     #experience .content .skill {
-      width: calc(100% - 100px);
+      width: calc(100% - 50px);
       border: 5px solid #001242;
       border-radius: 20px;
       padding: 20px;
-      margin: 25px;
+      margin: 25px 0px;
       overflow: hidden;
       transition: max-height 0.5s ease-out; }
       @media (min-width: 900px) {
         #experience .content .skill {
-          width: calc((100% / 3) - 100px); } }
+          width: calc((100% / 3) - 100px);
+          margin: 25px; } }
       #experience .content .skill p {
         margin: 20px 0px; }
       #experience .content .skill .skill-header {
