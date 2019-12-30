@@ -18,7 +18,7 @@ $light-blue: #0094c6;
 $light-grey: #e2dcde;
 
 @mixin mobile {
-    @media (max-width: 599px) {
+    @media (max-width: 900px) {
         @content;
     }
 }
@@ -89,9 +89,42 @@ header {
                     }
                 }
 
-                .linkedin {
-                    height: 40px;
-                    padding: 0px 25px;
+                a.linkedin-link {
+                    display: flex;
+                    background-color: white;
+                    height: 100%;
+
+                    img {
+                        height: 40px;
+                        padding: 0px 25px;
+                    }
+
+                    @include mobile {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 60px;
+                        height: initial;
+                    }
+                }
+
+                a.github-link {
+                    display: flex;
+                    background-color: black;
+                    height: 100%;
+
+                    img {
+                        height: 40px;
+                        padding: 0px 25px;
+                    }
+
+                    @include mobile {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 60px;
+                        height: initial;
+                    }
                 }
             }
         }
@@ -248,26 +281,48 @@ header {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
 
         a {
             text-decoration: none;
-            width: calc(50% - 100px);
-            margin: 25px;
+            width: calc(100% - 50px);
+            margin: 25px 0px;
             padding: 25px;
             background-color: $light-grey;
             display: flex;
             border-radius: 25px;
             align-items: center;
             box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25);
+            flex-direction: column;
+
+            @include desktop {
+                width: calc(50% - 100px);
+                margin: 25px;
+                flex-direction: row;
+            }
 
             img {
-                height: 100px;
-                flex: 0;
+                margin: 0px;
+                width: 100px;
+                height: initial;
+
+                @include desktop {
+                    height: 100px;
+                    flex: 0;
+                }
             }
 
             .info {
                 flex: 1;
-                margin-left: 20px;
+                margin-left: 0px;
+
+                @include desktop {
+                    margin: 20px;
+                }
 
                 h3 {
                     font-size: 24px;

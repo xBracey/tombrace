@@ -33,7 +33,7 @@ header {
         height: 120px;
         width: 120px;
         margin: 40px 0px 0px 50px; }
-        @media (max-width: 599px) {
+        @media (max-width: 900px) {
           header .content .content-container .logo {
             margin: 40px auto; } }
       header .content .content-container .menu {
@@ -51,12 +51,37 @@ header {
           header .content .content-container .menu a p {
             padding: 0px 25px;
             font-size: 24px; }
-          @media (max-width: 599px) {
+          @media (max-width: 900px) {
             header .content .content-container .menu a {
               display: none; } }
-        header .content .content-container .menu .linkedin {
-          height: 40px;
-          padding: 0px 25px; }
+        header .content .content-container .menu a.linkedin-link {
+          display: flex;
+          background-color: white;
+          height: 100%; }
+          header .content .content-container .menu a.linkedin-link img {
+            height: 40px;
+            padding: 0px 25px; }
+          @media (max-width: 900px) {
+            header .content .content-container .menu a.linkedin-link {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 60px;
+              height: initial; } }
+        header .content .content-container .menu a.github-link {
+          display: flex;
+          background-color: black;
+          height: 100%; }
+          header .content .content-container .menu a.github-link img {
+            height: 40px;
+            padding: 0px 25px; }
+          @media (max-width: 900px) {
+            header .content .content-container .menu a.github-link {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 60px;
+              height: initial; } }
   header .light-overlay {
     background-color: #0094c6;
     height: 60px;
@@ -164,23 +189,41 @@ header {
   #projects .project-cards {
     display: flex;
     flex-wrap: wrap;
-    width: 100%; }
+    width: 100%;
+    flex-direction: column; }
+    @media (min-width: 900px) {
+      #projects .project-cards {
+        flex-direction: row; } }
     #projects .project-cards a {
       text-decoration: none;
-      width: calc(50% - 100px);
-      margin: 25px;
+      width: calc(100% - 50px);
+      margin: 25px 0px;
       padding: 25px;
       background-color: #e2dcde;
       display: flex;
       border-radius: 25px;
       align-items: center;
-      box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25); }
+      box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25);
+      flex-direction: column; }
+      @media (min-width: 900px) {
+        #projects .project-cards a {
+          width: calc(50% - 100px);
+          margin: 25px;
+          flex-direction: row; } }
       #projects .project-cards a img {
-        height: 100px;
-        flex: 0; }
+        margin: 0px;
+        width: 100px;
+        height: initial; }
+        @media (min-width: 900px) {
+          #projects .project-cards a img {
+            height: 100px;
+            flex: 0; } }
       #projects .project-cards a .info {
         flex: 1;
-        margin-left: 20px; }
+        margin-left: 0px; }
+        @media (min-width: 900px) {
+          #projects .project-cards a .info {
+            margin: 20px; } }
         #projects .project-cards a .info h3 {
           font-size: 24px; }
         #projects .project-cards a .info h3,
