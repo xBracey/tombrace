@@ -243,4 +243,42 @@ header {
     img {
         height: 1px;
     }
+
+    .project-cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+            width: calc(50% - 100px);
+            margin: 25px;
+            padding: 25px;
+            background-color: $light-grey;
+            display: flex;
+            border-radius: 25px;
+            align-items: center;
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25);
+
+            img {
+                height: 100px;
+                flex: 0;
+            }
+
+            .info {
+                flex: 1;
+                margin-left: 20px;
+
+                h3 {
+                    font-size: 24px;
+                }
+
+                h3,
+                p {
+                    color: $dark-blue;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

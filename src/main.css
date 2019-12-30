@@ -161,3 +161,29 @@ header {
   background-color: #001242; }
   #projects img {
     height: 1px; }
+  #projects .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    #projects .project-cards a {
+      text-decoration: none;
+      width: calc(50% - 100px);
+      margin: 25px;
+      padding: 25px;
+      background-color: #e2dcde;
+      display: flex;
+      border-radius: 25px;
+      align-items: center;
+      box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.25); }
+      #projects .project-cards a img {
+        height: 100px;
+        flex: 0; }
+      #projects .project-cards a .info {
+        flex: 1;
+        margin-left: 20px; }
+        #projects .project-cards a .info h3 {
+          font-size: 24px; }
+        #projects .project-cards a .info h3,
+        #projects .project-cards a .info p {
+          color: #001242;
+          text-align: center; }
