@@ -29,13 +29,16 @@ header {
       padding: 0px 25px;
       display: flex;
       justify-content: space-between; }
+      @media (max-width: 900px) {
+        header .content .content-container {
+          padding: 0px; } }
       header .content .content-container .logo {
         height: 120px;
         width: 120px;
         margin: 40px 0px 0px 50px; }
         @media (max-width: 900px) {
           header .content .content-container .logo {
-            margin: 40px auto; } }
+            margin: 40px 0px 0px 25px; } }
       header .content .content-container .menu {
         display: flex;
         height: 100px;
@@ -61,13 +64,6 @@ header {
           header .content .content-container .menu a.linkedin-link img {
             height: 40px;
             padding: 0px 25px; }
-          @media (max-width: 900px) {
-            header .content .content-container .menu a.linkedin-link {
-              position: absolute;
-              top: 0;
-              left: 0;
-              bottom: 60px;
-              height: initial; } }
         header .content .content-container .menu a.github-link {
           display: flex;
           background-color: black;
@@ -75,13 +71,6 @@ header {
           header .content .content-container .menu a.github-link img {
             height: 40px;
             padding: 0px 25px; }
-          @media (max-width: 900px) {
-            header .content .content-container .menu a.github-link {
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 60px;
-              height: initial; } }
   header .light-overlay {
     background-color: #0094c6;
     height: 60px;
@@ -93,7 +82,7 @@ header {
 #about-me,
 #experience,
 #projects {
-  padding: 100px 25px;
+  padding: 100px 0px;
   display: flex;
   align-items: center;
   flex-direction: column; }

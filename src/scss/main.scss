@@ -53,13 +53,17 @@ header {
             display: flex;
             justify-content: space-between;
 
+            @include mobile {
+                padding: 0px;
+            }
+
             .logo {
                 height: 120px;
                 width: 120px;
                 margin: 40px 0px 0px 50px;
 
                 @include mobile {
-                    margin: 40px auto;
+                    margin: 40px 0px 0px 25px;
                 }
             }
 
@@ -98,14 +102,6 @@ header {
                         height: 40px;
                         padding: 0px 25px;
                     }
-
-                    @include mobile {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 60px;
-                        height: initial;
-                    }
                 }
 
                 a.github-link {
@@ -116,14 +112,6 @@ header {
                     img {
                         height: 40px;
                         padding: 0px 25px;
-                    }
-
-                    @include mobile {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 60px;
-                        height: initial;
                     }
                 }
             }
@@ -145,7 +133,7 @@ header {
 #about-me,
 #experience,
 #projects {
-    padding: 100px 25px;
+    padding: 100px 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
