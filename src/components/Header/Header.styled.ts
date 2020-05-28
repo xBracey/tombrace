@@ -5,12 +5,16 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
 `;
 
-export const Menu = styled.h3`
+export const Menu = styled(Link)`
     width: 100px;
     text-align: center;
-    margin: 100px;
+    margin: 0px 100px;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
 `;
 
 export const Logo = styled(Link)`

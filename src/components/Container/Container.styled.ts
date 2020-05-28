@@ -14,5 +14,5 @@ export const InnerContainer = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
 `;
