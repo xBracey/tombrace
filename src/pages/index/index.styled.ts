@@ -1,8 +1,21 @@
 import styled from "styled-components";
+import Img from "gatsby-image";
+import config from "../../config";
 
 export const Heading = styled.h2`
     width: 100%;
     text-align: center;
+    font-size: 36px;
 `;
 
-export const Paragraph = styled.p``;
+export const Paragraph = styled.p`
+    width: 100%;
+    font-size: 18px;
+`;
+
+export const HomeImage = styled(Img)`
+    width: calc((100% / 5) * 2 - 50px);
+    margin: 15px;
+    border: 10px solid ${config.colors.GREY};
+    border-radius: 10px;
+`;

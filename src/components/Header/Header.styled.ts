@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
+import config from "../../config";
 
 export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 175px;
+    background-color: ${config.colors.GREY};
 `;
 
 export const Menu = styled(Link)`

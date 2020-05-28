@@ -1,5 +1,7 @@
 {
-  "editor.formatOnSave": true,
-  "prettier.tabWidth": 4,
-  "prettier.printWidth": 200
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 200,
+    "prettier.arrowParens": "avoid",
+    "blueprint.templatesPath": ["./.vscode/.templates"]
 }

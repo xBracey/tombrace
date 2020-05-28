@@ -8,12 +8,14 @@ interface ILayoutProps {
 }
 
 export const Layout = ({ children, title }: ILayoutProps) => (
-    <OuterLayout>
-        <InnerLayout>
-            <Header />
-            <SEO title={title} />
-            <GlobalStyle />
-            {children}
-        </InnerLayout>
-    </OuterLayout>
+    <>
+        <Header />
+        <OuterLayout>
+            <InnerLayout>
+                <SEO title={title} />
+                <GlobalStyle />
+                {children}
+            </InnerLayout>
+        </OuterLayout>
+    </>
 );

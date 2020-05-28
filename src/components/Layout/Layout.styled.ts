@@ -5,16 +5,15 @@ export const OuterLayout = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${config.colors.GREY};
+    background-color: ${config.colors.WHITE};
 `;
 
 export const InnerLayout = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
+    padding: 50px 25px;
+    flex-wrap: wrap;
 `;
 
 export const GlobalStyle = createGlobalStyle`
