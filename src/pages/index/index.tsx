@@ -1,8 +1,13 @@
 import React from "react";
-import { Layout, Box } from "../../components";
+import { Layout, Box, Pill } from "../../components";
 import { Heading, Paragraph, HomeImage } from "./index.styled";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import config from "../../config";
+
+const FootyBee = require("../../assets/footyBee.svg");
+const Linkedin = require("../../assets/linkedin.png");
+const Github = require("../../assets/github.png");
+const Gmail = require("../../assets/gmail.svg");
 
 const IndexPage = ({ data, path }: any) => (
     <Layout title="Tom Brace - Developer">
@@ -30,9 +35,13 @@ const IndexPage = ({ data, path }: any) => (
                 <br />
                 This site is my biggest personal project to date and is inspired by my love of both football and games.
             </Paragraph>
+            <Pill image={FootyBee} backgroundcolor={config.colors.GREEN} color={config.colors.WHITE} text={"footybee.com"} link={"https://footybee.com"} />
         </Box>
         <Box width={"calc((100% / 5)*2 - 80px)"}>
             <Heading>Contact</Heading>
+            <Pill image={Linkedin} backgroundcolor={config.colors.WHITE} color={config.colors.LINKEDIN} text={"Tom Brace"} link={"https://www.linkedin.com/in/thomas-brace-793690131/"} />
+            <Pill image={Github} backgroundcolor={config.colors.BLACK} color={config.colors.WHITE} text={"xBracey"} link={"https://github.com/xBracey/"} />
+            <Pill image={Gmail} backgroundcolor={config.colors.WHITE} color={config.colors.RED} text={"thomasbrace22@gmail.com"} link={"mailto:thomasbrace22@gmail.com"} textSize={"14px"} />
         </Box>
     </Layout>
 );

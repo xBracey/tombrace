@@ -6,22 +6,22 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 175px;
+    height: 160px;
     background-color: ${config.colors.GREY};
 `;
 
 export const Menu = styled(Link)`
     width: 100px;
     text-align: center;
-    margin: 0px 100px;
-    font-size: 24px;
+    margin: 0px 75px;
+    font-size: 28px;
     text-decoration: none;
     font-weight: bold;
 `;
 
 export const Logo = styled(Link)`
     img {
-        height: 120px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
     }
 `;

@@ -11,4 +11,7 @@ export const BoxContainer = styled.div<IBoxContainer>`
     background-color: ${config.colors.GREY};
     border-radius: 20px;
     width: ${props => props.width};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
