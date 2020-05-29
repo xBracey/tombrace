@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Box, Pill } from "../../components";
-import { Heading, Paragraph, HomeImage } from "./index.styled";
+import { Heading, Paragraph, HomeImage } from "../index.styled";
 import { graphql } from "gatsby";
 import config from "../../config";
 
@@ -10,7 +10,7 @@ const Github = require("../../assets/github.png");
 const Gmail = require("../../assets/gmail.svg");
 
 const IndexPage = ({ data, path }: any) => (
-    <Layout title="Tom Brace - Developer">
+    <Layout title="About">
         <Box width={"calc((100% / 5)*3 - 80px)"}>
             <Heading>About Me</Heading>
             <Paragraph>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Img from "gatsby-image";
-import config from "../../config";
+import config from "../config";
 
 export const Heading = styled.h2`
     width: 100%;
