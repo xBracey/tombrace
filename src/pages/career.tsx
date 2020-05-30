@@ -1,8 +1,11 @@
 import React from "react";
-import { Layout, Box, Skill, CareerPill } from "../components";
+import { Layout, Box, Skill, CareerPill, Qualification } from "../components";
 import { Heading, SubHeading, CareerLeft, HeadingLink, CVImage } from "./index.styled";
 
 const Document = require("../assets/document.svg");
+const ISTQB = require("../assets/istqb.jpg");
+const Durham = require("../assets/durham.png");
+const SixthForm = require("../assets/sixthForm.png");
 
 const CareerPage = ({ data, path }: any) => (
     <Layout title="Career">
@@ -22,6 +25,9 @@ const CareerPage = ({ data, path }: any) => (
             </Box>
             <Box width={"calc(100% - 80px)"}>
                 <Heading>Qualifications</Heading>
+                <Qualification image={ISTQB} text={"ISTQB® Foundation Level"} subtext={"August 2018"} />
+                <Qualification image={Durham} text={"Durham University"} subtext={"September 2015 -  June 2018"} subsubtext={"BSC Computer Science 2:1"} />
+                <Qualification image={SixthForm} text={"Hartlepool Sixth Form College"} subtext={"September 2013 -  June 2015"} subsubtext={"A* - Maths, A - Further Maths, A - Computing"} />
             </Box>
         </CareerLeft>
         <Box width={"calc((100% / 5) * 2 - 80px)"}>

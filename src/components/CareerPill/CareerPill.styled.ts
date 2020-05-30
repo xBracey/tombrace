@@ -6,7 +6,7 @@ export const CareerPillContainer = styled.div`
     display: flex;
     border-radius: 20px;
     align-items: center;
-    padding: 20px 0px;
+    padding: 20px 10px;
     margin: 10px;
 `;
 
@@ -16,12 +16,12 @@ export const Dot = styled.div`
     min-width: 12px;
     border-radius: 50%;
     background-color: ${config.colors.BLACK};
-    margin: 25px;
+    margin: 25px 15px;
 `;
 
 export const PillText = styled.p`
     font-size: 18px;
     color: ${config.colors.BLACK};
-    margin: 0px;
+    margin: 0px 10px;
     text-align: center;
 `;

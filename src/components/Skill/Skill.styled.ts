@@ -8,8 +8,8 @@ interface IBox {
 const borderRadius = "20px";
 
 const CoreBox = css`
-    width: 55px;
-    height: 35px;
+    width: 65px;
+    height: 42px;
     border: 4px solid;
     margin: 2px;
 `;
