@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import config from "../../config";
+import { mobileMixin } from "../../index.styled";
 
 interface IBoxContainer {
     width: string;
@@ -14,4 +15,8 @@ export const BoxContainer = styled.div<IBoxContainer>`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    ${mobileMixin(`
+        width: calc(100% - 80px);
+    `)}
 `;

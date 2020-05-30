@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Box } from "../components";
-import { Heading } from "./index.styled";
+import { Heading } from "../index.styled";
 
 const FourOhFour = ({ data, path }: any) => (
     <Layout title="404">

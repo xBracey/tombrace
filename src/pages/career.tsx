@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Box, Skill, CareerPill, Qualification } from "../components";
-import { Heading, SubHeading, CareerLeft, HeadingLink, CVImage } from "./index.styled";
+import { Heading, SubHeading, CareerLeft, HeadingLink, CVImage } from "../index.styled";
 
 const Document = require("../assets/document.svg");
 const ISTQB = require("../assets/istqb.jpg");

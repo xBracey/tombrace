@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import config from "../../config";
+import { mobileMixin } from "../../index.styled";
 
 export const OuterLayout = styled.div`
     display: flex;
@@ -14,6 +15,10 @@ export const InnerLayout = styled.div`
     max-width: 1000px;
     padding: 50px 25px;
     flex-wrap: wrap;
+
+    ${mobileMixin(`
+        flex-direction: column;
+    `)}
 `;
 
 export const GlobalStyle = createGlobalStyle`

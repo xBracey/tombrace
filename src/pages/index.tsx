@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Box, Pill } from "../components";
-import { Heading, Paragraph, HomeImage } from "./index.styled";
+import { Heading, Paragraph, HomeImage } from "../index.styled";
 import { graphql } from "gatsby";
 import config from "../config";
 

@@ -1,6 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Img from "gatsby-image";
-import config from "../config";
+import config from "./config";
+
+export const mobileMixin = (rules: string) => css`
+    @media (max-width: 900px) {
+        ${rules}
+    }
+`;
 
 export const Heading = styled.h2`
     width: 100%;
@@ -42,12 +48,20 @@ export const HomeImage = styled(Img)`
     margin: 15px;
     border: 10px solid ${config.colors.GREY};
     border-radius: 10px;
+
+    ${mobileMixin(`
+        width: calc(100% - 50px);
+    `)}
 `;
 
 export const CareerLeft = styled.div`
     display: flex;
     width: calc((100% / 5) * 3);
     flex-direction: column;
+
+    ${mobileMixin(`
+        width: 100%;
+    `)}
 `;
 
 export const CVImage = styled.img`
