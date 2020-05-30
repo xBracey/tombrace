@@ -17,11 +17,12 @@ const IndexPage = ({ data, path }: any) => (
                 My name is Tom Brace and I’m a software developer working for Komodo Digital in Newcastle.
                 <br />
                 <br />
-                On this site, you will find information about me, (this is a personal site so duh!) the projects I work on and a career section.
+                My area of expertise is using JavaScript and TypeScript to develop both back-end and front-end applications. For instance this site is written in TypeScript using{" "}
+                <a href="https://www.gatsbyjs.org/">GatsbyJS</a> and can be found <a href="https://github.com/xBracey/tombrace">here</a> on my Github page
                 <br />
                 <br />
-                The career section basically breaks down my CV is a nicer format than the black and white PDF file I use for job applications (that is included on the page if that it is more to your
-                tastes though!).
+                On this site, you will find information about me, the projects I work on and a career section. The career section breaks down my CV is a nicer format than the black and white PDF file
+                I use for job applications, which is also included on that page
             </Paragraph>
         </Box>
 
