@@ -8,5 +8,6 @@ export default {
         LINKEDIN: "#2867B2",
         LIGHT_BLUE: "#4971DC",
         DARK_BLUE: "#012483",
+        DARK_GREY: "#AAAAAA",
     },
 };

@@ -10,6 +10,14 @@ export const Heading = styled.h2`
     margin: 0px;
 `;
 
+export const SubHeading = styled.h2`
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px 0px;
+    margin: 0px;
+`;
+
 export const Paragraph = styled.p`
     width: 100%;
     font-size: 18px;
