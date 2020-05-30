@@ -23,3 +23,9 @@ export const HomeImage = styled(Img)`
     border: 10px solid ${config.colors.GREY};
     border-radius: 10px;
 `;
+
+export const CareerLeft = styled.div`
+    display: flex;
+    width: calc((100% / 5) * 3);
+    flex-direction: column;
+`;
