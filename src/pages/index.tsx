@@ -14,7 +14,7 @@ const IndexPage = ({ data, path }: any) => (
         <Box width={"calc((100% / 5)*3 - 80px)"}>
             <Heading>About Me</Heading>
             <Paragraph>
-                My name is Thomas Brace and I’m a software developer working for Komodo Digital in Newcastle.
+                My name is Tom Brace and I’m a software developer working for Komodo Digital in Newcastle.
                 <br />
                 <br />
                 On this site, you will find information about me, (this is a personal site so duh!) the projects I work on and a career section.

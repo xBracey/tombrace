@@ -10,4 +10,5 @@ export default {
         DARK_BLUE: "#012483",
         DARK_GREY: "#AAAAAA",
     },
+    desktopMinViewport: 800,
 };

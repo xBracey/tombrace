@@ -7,6 +7,7 @@ export const OuterLayout = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${config.colors.WHITE};
+    width: 100vw;
 `;
 
 export const InnerLayout = styled.div`
@@ -30,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
       margin: 0;
       padding: 0;
+      min-height: 101vh; 
   }
 
   h1 {

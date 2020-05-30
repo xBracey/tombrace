@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import config from "./config";
 
 export const mobileMixin = (rules: string) => css`
-    @media (max-width: 900px) {
+    @media (max-width: 800px) {
         ${rules}
     }
 `;
