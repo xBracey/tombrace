@@ -1,7 +1,8 @@
 import React from "react";
-import { Layout, Box, Skill, CareerPill } from "../../components";
-import { Heading, SubHeading, CareerLeft } from "../index.styled";
-import config from "../../config";
+import { Layout, Box, Skill, CareerPill } from "../components";
+import { Heading, SubHeading, CareerLeft, HeadingLink, CVImage } from "./index.styled";
+
+const Document = require("../assets/document.svg");
 
 const CareerPage = ({ data, path }: any) => (
     <Layout title="Career">
@@ -20,7 +21,7 @@ const CareerPage = ({ data, path }: any) => (
                 <CareerPill text={"Developer on an ASP.NET web application and Xamarin Forms cross platform mobile app"} />
             </Box>
             <Box width={"calc(100% - 80px)"}>
-                <Heading>Career</Heading>
+                <Heading>Qualifications</Heading>
             </Box>
         </CareerLeft>
         <Box width={"calc((100% / 5) * 2 - 80px)"}>
@@ -33,6 +34,11 @@ const CareerPage = ({ data, path }: any) => (
             <Skill header={"PHP"} level={1}></Skill>
             <Skill header={"Gatsby/ GraphQL"} level={0}></Skill>
             <Skill header={"C#"} level={0}></Skill>
+        </Box>
+        <Box width={"calc(100% - 80px)"}>
+            <HeadingLink href="/cv.pdf">
+                Full CV <CVImage src={Document}></CVImage>
+            </HeadingLink>
         </Box>
     </Layout>
 );

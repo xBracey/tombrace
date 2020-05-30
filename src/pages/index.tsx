@@ -1,13 +1,13 @@
 import React from "react";
-import { Layout, Box, Pill } from "../../components";
-import { Heading, Paragraph, HomeImage } from "../index.styled";
+import { Layout, Box, Pill } from "../components";
+import { Heading, Paragraph, HomeImage } from "./index.styled";
 import { graphql } from "gatsby";
-import config from "../../config";
+import config from "../config";
 
-const FootyBee = require("../../assets/footyBee.svg");
-const Linkedin = require("../../assets/linkedin.png");
-const Github = require("../../assets/github.png");
-const Gmail = require("../../assets/gmail.svg");
+const FootyBee = require("../assets/footyBee.svg");
+const Linkedin = require("../assets/linkedin.png");
+const Github = require("../assets/github.png");
+const Gmail = require("../assets/gmail.svg");
 
 const IndexPage = ({ data, path }: any) => (
     <Layout title="About">
