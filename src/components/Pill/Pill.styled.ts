@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobileMixin } from "../../index.styled";
 
 interface IPillContainer {
     backgroundcolor: string;
@@ -23,6 +24,10 @@ export const PillContainer = styled.a<IPillContainer>`
 
 export const PillImage = styled.img`
     width: 60px;
+
+    ${mobileMixin(`
+        width: 40px;
+    `)};
 `;
 
 export const PillText = styled.p<IPillText>`
@@ -30,4 +35,5 @@ export const PillText = styled.p<IPillText>`
     font-size: ${props => props.textSize};
     flex: 1;
     text-align: center;
+    word-break: break-all;
 `;

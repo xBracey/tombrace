@@ -14,6 +14,7 @@ export const HeaderContainer = styled.div`
     height: 160px;
     background-color: ${config.colors.GREY};
     padding: 0px 50px;
+    width: calc(100vw - 100px);
 
     ${mobileMixin(`
         justify-content: space-between;
@@ -43,6 +44,7 @@ export const Logo = styled(Link)`
 
 export const MenuImage = styled.img`
     width: 75px;
+    touch-action: manipulation;
 `;
 
 export const MenuContainer = styled.div<IMenuContainer>`
@@ -59,6 +61,7 @@ export const MenuContainer = styled.div<IMenuContainer>`
 
 export const BlockScroll = createGlobalStyle`
   html, body {
+    overflow: hidden;
     position: fixed;
     touch-action: none;
   }

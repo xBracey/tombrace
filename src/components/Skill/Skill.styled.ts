@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import config from "../../config";
+import { mobileMixin } from "../../index.styled";
 
 interface IBox {
     filled: boolean;
@@ -12,6 +13,11 @@ const CoreBox = css`
     height: 42px;
     border: 4px solid;
     margin: 2px;
+
+    ${mobileMixin(`
+        width: 44px;
+        height: 28px;
+    `)};
 `;
 
 export const SkillContainer = styled.div`

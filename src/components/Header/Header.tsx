@@ -32,9 +32,7 @@ const HeaderMobile = () => {
                 <Logo to={"/"}>
                     <img src={logoSrc} />
                 </Logo>
-                <div onClick={onMenuClicked}>
-                    <MenuImage src={MenuIcon} />
-                </div>
+                <MenuImage src={MenuIcon} onClick={onMenuClicked} />
             </HeaderContainer>
             <MenuContainer menuOpen={menuOpen}>
                 {BlockScrollComponent}

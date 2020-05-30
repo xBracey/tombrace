@@ -50,7 +50,8 @@ export const HomeImage = styled(Img)`
     border-radius: 10px;
 
     ${mobileMixin(`
-        width: calc(100% - 50px);
+        width: calc(100% - 20px);
+        margin: 15px 0px;
     `)}
 `;
 

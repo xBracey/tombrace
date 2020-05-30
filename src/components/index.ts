@@ -6,4 +6,3 @@ export * from "./Pill";
 export * from "./Skill";
 export * from "./CareerPill";
 export * from "./Qualification";
-export * from "./Container";

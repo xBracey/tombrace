@@ -17,6 +17,7 @@ export const BoxContainer = styled.div<IBoxContainer>`
     justify-content: center;
 
     ${mobileMixin(`
-        width: calc(100% - 80px);
+        width: calc(100% - 50px);
+        margin: 15px 0px;
     `)}
 `;
