@@ -14,7 +14,7 @@ const IndexPage = ({ data, path }: any) => (
         <Box width={"calc((100% / 5)*3 - 80px)"}>
             <Heading>About Me</Heading>
             <Paragraph>
-                My name is Tom Brace and I’m a software developer working for Komodo Digital in Newcastle.
+                My name is Tom Brace and I’m a software developer working for Mangahigh in London
                 <br />
                 <br />
                 My area of expertise is using JavaScript and TypeScript to develop both back-end and front-end applications. For instance this site is written in TypeScript using{" "}
@@ -31,7 +31,7 @@ const IndexPage = ({ data, path }: any) => (
         <Box width={"calc((100% / 5)*3 - 80px)"}>
             <Heading>FootyBee</Heading>
             <Paragraph>
-                FootyBee is a Euro 2020 football predictor. As a user, you can make football predictions, create and join leagues with your friends and you can customise the leagues. 
+                FootyBee is a Euro 2020 football predictor. As a user, you can make football predictions, create and join leagues with your friends and you can customise the leagues.
                 <br />
                 <br />
                 This site is my biggest personal project to date and is inspired by my love of both football and games.
