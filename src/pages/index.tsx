@@ -150,7 +150,7 @@ export const Home = () => {
 
         <div className="grid gap-8 md:grid-cols-2 my-6">
           {projects.map((project) => (
-            <Project {...project} />
+            <Project key={project.href} {...project} />
           ))}
         </div>
       </div>
@@ -165,7 +165,7 @@ export const Home = () => {
 
         <div className="grid gap-8 md:grid-cols-2 my-6">
           {selfHostedProjects.map((project) => (
-            <SelfHostedProject {...project} />
+            <SelfHostedProject  key={project.href} {...project} />
           ))}
         </div>
       </div>
