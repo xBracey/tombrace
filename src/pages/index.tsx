@@ -67,7 +67,12 @@ const selfHostedProjects = [
     image: <Automation className="h-24 w-24 px-4" />,
     bg: "bg-green-300",
   },
- 
+  {
+    title: "Games",
+    href: "https://games.tombrace.co.uk/",
+    image: <Game className="h-24 w-24 px-4" />,
+    bg: "bg-teal-300",
+  },
 ];
 
 export const Home = () => {
@@ -86,8 +91,7 @@ export const Home = () => {
           <h1 className="text-4xl font-bold text-center">Tom Brace</h1>
 
           <p className="text-xl text-center">
-            Hi I'm Tom, a fullstack developer based in London and welcome to my
-            website! Here you can find out more about me, my projects and how to
+            Hi! I'm Tom, a fullstack developer based in London and welcome to my slice of the web! Here you can find out more about me, my projects and how to
             get in touch.
           </p>
 
@@ -117,6 +121,23 @@ export const Home = () => {
             </a>
           </div>
         </div>
+      </div>
+
+      <div>
+        <h2
+          className="text-3xl font-bold text-center py-6 border-indigo-400 border-b-2"
+          id="about"
+        >
+          About
+        </h2>
+
+        <p className="text-center my-6 text-lg">
+        I'm an experienced fullstack developer with expertise in using React, AWS, and Typescript. I was born in Hartlepool but now reside in London. Originally a passionate Hartlepool United fan, I still try to catch matches when I can.
+     <br /><br />
+        With 7 years of experience in web development, I've had the opportunity to work on a wide variety of projects, from business websites to complex web applications. On the frontend, I enjoy building responsive, interactive UIs using React and Typescript. For the backend and infrastructure, I leverage AWS services like EC2, Lambda, RDS, and more to create robust and scalable solutions.
+        <br /><br />
+        When I'm not coding, you can usually find me on the footy pitch or immersed in my latest coding side project. I enjoy creating mini-games using React, Typescript, and PixiJS which you can find in my game library. Game development lets me flex my creative muscles outside of purely technical work.
+        </p>
       </div>
 
       <div>
