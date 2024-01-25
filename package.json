@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "serve": "nohup static-web-server --port 8010 --root ./dist &",
     "generate-icons": "bun .icons/index.js && prettier ./src/components/Icons.tsx --write"
   },
   "dependencies": {
