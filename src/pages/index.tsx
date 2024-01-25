@@ -31,7 +31,7 @@ const projects = [
   {
     title: "My Game Library",
     description: "My personal game library built with React and PixiJS.",
-    href: "https://game.tombrace.co.uk/",
+    href: "https://games.tombrace.co.uk/",
     image: <Game className="h-24 w-24 px-4" />,
   },
 ];
