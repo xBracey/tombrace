@@ -1,62 +1,153 @@
-import React from "react";
-import { Layout, Box, Pill } from "../components";
-import { Heading, Paragraph, HomeImage } from "../index.styled";
-import { graphql } from "gatsby";
-import config from "../config";
 
-const FootyBee = require("../assets/footyBee.svg");
-const Linkedin = require("../assets/linkedin.png");
-const Github = require("../assets/github.png");
-const Gmail = require("../assets/gmail.svg");
+import { Automation, Email, Game, Github, Linkedin, Meals, Notes, Share, Todo } from "../components/Icons";
+import { Project } from "../components/Project";
+import { SelfHostedProject } from "../components/SelfHostedProject";
 
-const IndexPage = ({ data, path }: any) => (
-    <Layout title="About">
-        <Box width={"calc((100% / 5)*3 - 80px)"}>
-            <Heading>About Me</Heading>
-            <Paragraph>
-                My name is Tom Brace and I’m a software developer working for Mangahigh in London
-                <br />
-                <br />
-                My area of expertise is using JavaScript and TypeScript to develop both back-end and front-end applications. For instance this site is written in TypeScript using{" "}
-                <a href="https://www.gatsbyjs.org/">GatsbyJS</a> and can be found <a href="https://github.com/xBracey/tombrace">here</a> on my Github page
-                <br />
-                <br />
-                On this site, you will find information about me, the projects I work on and a career section. The career section breaks down my CV is a nicer format than the black and white PDF file
-                I use for job applications, which is also included on that page
-            </Paragraph>
-        </Box>
+const projects = [
+  {
+    title: "First Team Physiotherapy",
+    description:
+      "A website for a physiotherapy based in Hartlepool. Built with React and Strapi CMS.",
+    href: "https://www.firstteamphysiotherapy.co.uk/",
+    image: "/physio.png",
+  },
 
-        <HomeImage fluid={data.homeImage.childImageSharp.fluid} />
+  {
+    title: "Neeya Community",
+    description:
+      "A community interest company based in West London. Built with React and Directus CMS.",
+    href: "https://neeya.co.uk/",
+    image: "/neeya.png",
+  },
 
-        <Box width={"calc((100% / 5)*3 - 80px)"}>
-            <Heading>FootyBee</Heading>
-            <Paragraph>
-                FootyBee is a Euro 2020 football predictor. As a user, you can make football predictions, create and join leagues with your friends and you can customise the leagues.
-                <br />
-                <br />
-                This site is my biggest personal project to date and is inspired by my love of both football and games.
-            </Paragraph>
-            <Pill image={FootyBee} backgroundcolor={config.colors.GREEN} color={config.colors.WHITE} text={"footybee.com"} link={"https://footybee.com"} />
-        </Box>
-        <Box width={"calc((100% / 5)*2 - 80px)"}>
-            <Heading>Contact</Heading>
-            <Pill image={Linkedin} backgroundcolor={config.colors.WHITE} color={config.colors.LINKEDIN} text={"Tom Brace"} link={"https://www.linkedin.com/in/thomas-brace-793690131/"} />
-            <Pill image={Github} backgroundcolor={config.colors.BLACK} color={config.colors.WHITE} text={"xBracey"} link={"https://github.com/xBracey/"} />
-            <Pill image={Gmail} backgroundcolor={config.colors.WHITE} color={config.colors.RED} text={"thomasbrace22@gmail.com"} link={"mailto:thomasbrace22@gmail.com"} textSize={"14px"} />
-        </Box>
-    </Layout>
-);
+  {
+    title: "South London United",
+    description:
+      "My local football team website built with React and Directus CMS.",
+    href: "https://www.southlondonunited.co.uk/",
+    image: "/football.png",
+  },
 
-export const query = graphql`
-    query {
-        homeImage: file(relativePath: { eq: "home.JPG" }) {
-            childImageSharp {
-                fluid(maxWidth: 600, quality: 50) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
+  {
+    title: "My Game Library",
+    description: "My personal game library built with React and PixiJS.",
+    href: "https://game.tombrace.co.uk/",
+    image: <Game className="h-24 w-24 px-4" />,
+  },
+];
 
-export default IndexPage;
+const selfHostedProjects = [
+  {
+    title: "Share",
+    href: "https://share.tombrace.co.uk/",
+    image: <Share className="h-24 w-24 px-4" />,
+    bg: "bg-red-300",
+  },
+  {
+    title: "Meals",
+    href: "https://meals.tombrace.co.uk/",
+    image: <Meals className="h-24 w-24 px-4" />,
+    bg: "bg-pink-300",
+  },
+  {
+    title: "Todo",
+    href: "https://todo.tombrace.co.uk/",
+    image: <Todo className="h-24 w-24 px-4" />,
+    bg: "bg-purple-300",
+  },
+  {
+    title: "Notes",
+    href: "https://notes.tombrace.co.uk/",
+    image: <Notes className="h-24 w-24 px-4" />,
+    bg: "bg-blue-300",
+  },
+  {
+    title: "Automation",
+    href: "https://automation.tombrace.co.uk/",
+    image: <Automation className="h-24 w-24 px-4" />,
+    bg: "bg-green-300",
+  },
+ 
+];
+
+export const Home = () => {
+  return (
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center justify-center gap-8 p-8 flex-col md:flex-row">
+        <div className="min-w-72">
+          <img
+            src="/me.JPG"
+            alt="Web developer"
+            className="h-72 w-72 rounded-full border-indigo-400 border-8"
+          />
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="text-4xl font-bold text-center">Tom Brace</h1>
+
+          <p className="text-xl text-center">
+            Hi I'm Tom, a fullstack developer based in London and welcome to my
+            website! Here you can find out more about me, my projects and how to
+            get in touch.
+          </p>
+
+          <div className="mt-4 flex gap-4 justify-center items-center">
+            <a
+              href="https://github.com/xBracey"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github className="h-12 w-12 aspect-auto" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/thomas-brace-793690131/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin className="h-12 w-12" />
+            </a>
+
+            <a
+              href="mailto:thomasbrace22@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Email className="h-14 w-14" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2
+          className="text-3xl font-bold text-center py-6 border-indigo-400 border-b-2"
+          id="projects"
+        >
+          Projects
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-2 my-6">
+          {projects.map((project) => (
+            <Project {...project} />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2
+          className="text-3xl font-bold text-center py-6 border-indigo-400 border-b-2"
+          id="self-hosted"
+        >
+          Self Hosted Projects
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-2 my-6">
+          {selfHostedProjects.map((project) => (
+            <SelfHostedProject {...project} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
