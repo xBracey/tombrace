@@ -10,7 +10,7 @@ export const Project = ({ title, description, href, image }: ProjectProps) => (
     <div className="rounded-lg shadow-xl overflow-hidden bg-indigo-300 h-full transition-all hover:scale-105">
       <div className="flex gap-4 items-center bg-indigo-100">
         {typeof image === "string" ? (
-          <img src={image} className="h-24 min-w-24 p-1" />
+          <img src={image} className="h-24 min-w-24 p-1.5" />
         ) : (
           image
         )}
